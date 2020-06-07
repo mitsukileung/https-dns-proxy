@@ -31,8 +31,11 @@ o.datatype = "ipaddr"
 o.placeholder = "127.0.0.1"
 o.rmempty=true
 o=s:option(Value,"port",translate("Local port to bind to (Default 5053)"))
-o.datatype="range(1,65535)"
+o.datatype="port"
 o.placeholder = "5053"
+o.rmempty=true
+o=s:option(Value,"proxy",translate("Proxy server"),
+translate("Proxy server(optional)<br />Supported Protocols: http, https, socks4a, socks5h<br />For example: socks5://127.0.0.1:1080, http://127.0.0.1:8080"))
 o.rmempty=true
 o=s:option(Flag,"mode",translate("Dnsmasq upstream server"),
 translate("Run as Dnsmasq upstream server"))
