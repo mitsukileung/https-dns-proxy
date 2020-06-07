@@ -48,3 +48,9 @@ msgstr "使用IPv4通信"
 
 msgid "Connect to DoH server using IPv4"
 msgstr "使用IPv4连接到DoH服务器"
+
+msgid "Proxy server"
+msgstr "代理服务器"
+
+msgid "Proxy server(optional)<br />Supported Protocols: http, https, socks4a, socks5h<br />For example: socks5://127.0.0.1:1080, http://127.0.0.1:8080"
+msgstr "代理服务器(可选)<br />支持的协议: http, https, socks4a, socks5h<br />例如: socks5://127.0.0.1:1080, http://127.0.0.1:8080"
