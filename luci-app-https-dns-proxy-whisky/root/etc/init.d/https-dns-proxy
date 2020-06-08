@@ -31,7 +31,7 @@ start_service(){
 		dns=$(echo $(cat /tmp/resolv.conf.auto 2>/dev/null | grep nameserver | awk '{print $2}') | sed "s/\s\+/,/g")
 		while [ -z $dns ];do
 			sleep 1
-			dns=$(echo $(cat /tmp/resolv.conf.auto | grep nameserver | awk '{print $2}') | sed "s/\s\+/,/g")
+			dns=$(echo $(cat /tmp/resolv.conf.auto 2>/dev/null | grep nameserver | awk '{print $2}') | sed "s/\s\+/,/g")
 		done
 	fi
 	dns=$(echo $dns | sed "s/，/,/g" | sed "s/。/./g" | sed "s/：/:/g" | sed "s/【/[/g" | sed "s/】/]/g" | sed "s/[^0-9A-Fa-f]*$//g")
